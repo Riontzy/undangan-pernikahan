@@ -1,0 +1,352 @@
+/* Variabel Warna */
+:root {
+    --gold: #bc9c54;
+    --dark: #333;
+    --cream: #fdfaf5;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('cover.jpeg') center/cover;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transition: 1s ease-in-out;
+}
+
+#overlay h1 { font-family: 'Great Vibes', cursive; font-size: 4rem; color: var(--gold); }
+
+.btn-open {
+    margin-top: 20px;
+    padding: 12px 35px;
+    background: var(--gold);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Hero Section */
+/* Update Bagian Hero Section */
+.hero {
+    min-height: 100vh; /* Setinggi layar penuh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Konten di tengah secara vertikal */
+    align-items: center; /* Konten di tengah secara horizontal */
+    
+    /* Ganti 'hero-bg.jpg' dengan nama file foto Anda yang beresolusi tinggi */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpeg') center/cover no-repeat;
+    opacity: 0.9;
+    
+    text-align: center;
+    color: var(--white); /* Teks menjadi putih agar kontras */
+    padding: 20px;
+}
+
+/* Memperbesar Judul Utama */
+.hero .main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 8rem; /* Ukuran Jauh Lebih Besar (Sangat Mewah) */
+    margin-bottom: 30px;
+    color: var(--white); /* Teks putih */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sedikit bayangan agar mudah dibaca */
+}
+
+/* Memperbesar & Memperjelas Badge Tanggal */
+.hero .date-badge {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 3px solid var(--white); /* Border Putih Tebal */
+    font-size: 2rem; /* Ukuran Tanggal Lebih Besar */
+    letter-spacing: 6px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Menata Teks 'The Wedding of' & 'Save the Date' */
+.hero p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+/* Update Quote Section Agar Lebih Masuk Akal */
+.quote-section {
+    position: relative;
+    padding: 150px 20px;
+    /* Ganti 'background-foto.jpg' dengan foto pre-wedding Anda */
+    background: linear-gradient(rgba(253, 250, 245, 0.8), rgba(253, 250, 245, 0.8)), 
+                url('background-foto.jpeg') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.glass-card.luxury-border {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid var(--gold);
+    padding: 60px 40px;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(188, 156, 84, 0.2); /* Shadow warna emas tipis */
+}
+
+/* Garis Pembatas Mewah */
+.divider {
+    width: 100px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px auto;
+    position: relative;
+}
+
+.divider::after {
+    content: '✦';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 10px;
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.arabic {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+/* Quote lebih elegan */
+.quote-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+/* Ornamen Floral di sudut (Gunakan file PNG transparan jika ada) */
+.floral-ornament {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.top-left { top: 0; left: 0; background-image: url('floral-corner.jpg'); }
+.bottom-right { bottom: 0; right: 0; background-image: url('floral-corner.jpg'); transform: rotate(180deg); }
+
+/* Perbaikan Responsif untuk Layar Kecil */
+@media (max-width: 768px) {
+    .quote-section { padding: 80px 20px; }
+    .arabic { font-size: 1.5rem; }
+    .glass-card.luxury-border { padding: 40px 20px; }
+}
+
+/* Couple Section */
+.couple-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.photo-frame {
+    width: 240px;
+    height: 340px;
+    border: 8px solid white;
+    border-radius: 120px 120px 0 0;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin: 0 auto 15px;
+}
+
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.ampersand { font-family: 'Great Vibes'; font-size: 4rem; color: var(--gold); }
+
+.invitation-gallery {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--cream);
+}
+
+/* Memastikan background mengisi seluruh layar */
+.gallery-bg {
+    position: absolute;
+    inset: 0; /* Mengisi seluruh area kontainer */
+    z-index: 1;
+}
+
+.gallery-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Foto tidak gepeng dan memenuhi layar */
+    object-position: center;
+    opacity: 15%;
+}
+.gallery-bg img.active {
+    opacity: 15%;
+    z-index: 2; /* Memastikan gambar berada di depan latar hitam */
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    /* Tambahkan gradasi agar teks putih lebih mudah dibaca */
+    background: linear-gradient(
+        to bottom,
+        #fdfaf5 0%,         /* Warna krem pekat di atas (sama dengan background section quote) */
+        rgba(0, 0, 0, 0.4) 20%, /* Bayangan tipis agar teks putih terbaca */
+        rgba(0, 0, 0, 0.4) 80%, 
+        #fdfaf5 100%        /* Warna krem pekat di bawah untuk menyambung section berikutnya */
+    );
+    z-index: 3;
+}
+/* Konten Teks di Tengah Layar */
+.invitation-content {
+    position: absolute; /* Ubah ke absolute agar menimpa background */
+    top: auto;
+    left: auto;
+    right:auto;
+    bottom:auto;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 900px;
+}
+.pre-text {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.mempelai-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem; /* Ukuran diperbesar agar mewah */
+    color: var(--gold);
+    margin-top: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+    .mempelai-names { font-size: 3rem; }
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.section-title { font-family: 'Great Vibes'; font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
+
+.qr-area {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.event-box { border: 1px dashed var(--gold); padding: 20px; border-radius: 15px; }
+
+/* Comment Section */
+#commentForm input, #commentForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.btn-send {
+    width: 100%;
+    padding: 12px;
+    background: var(--gold);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-box {
+    margin-top: 30px;
+    text-align: left;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title { font-size: 3rem; }
+    .couple-container { flex-direction: column; }
+    .photo-frame { width: 200px; height: 280px; }
+}
+
+.arabic { font-size: 1.5rem; margin-bottom: 15px; color: var(--gold); }
+.quote-text { max-width: 600px; margin: 0 auto; line-height: 1.8; }
+.reference { margin-top: 10px; font-weight: 600; color: var(--gold); }
+.invitation-text { padding: 20px; max-width: 700px; margin: 0 auto; }
+
+.thank-you {
+    padding-bottom: 100px;
+    background: linear-gradient(transparent, var(--cream));
+}
+.thank-you p { font-size: 0.95rem; color: #555; }

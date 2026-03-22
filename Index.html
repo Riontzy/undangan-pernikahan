@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Eksklusif</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="weddingMusic" loop>
+        <source src="lagu.mpga" type="audio/mpeg">
+    </audio>
+
+    <div id="overlay">
+        <div class="overlay-content" data-aos="zoom-in">
+            <p>The Wedding of</p>
+            <h1>Mario & Yunita</h1>
+            <button class="btn-open" onclick="startWedding()">Buka Undangan</button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div data-aos="fade-up">
+            <p>Save the Date</p>
+            <h2 class="main-title">Mario & Yunita</h2>
+            <p>Kami Mengundang Anda</p>
+            <div class="date-badge">20 . 12 . 2027</div>
+        </div>
+    </section>
+    <section class="quote-section" data-aos="fade-up">
+        <div class="floral-ornament top-left"></div>
+        <div class="floral-ornament bottom-right"></div>
+
+        <div class="glass-card luxury-border">
+            <p class="arabic">עַל־כֵּן אֵינָם עוֹד שְׁנַיִם כִּי אִם־בָּשָׂר אֶחָד לָכֵן אֶת אֲשֶׁר חִבַּר הָאֱלֹהִים אַל־יַפְרִיד הָאָדָם</p>
+            <div class="divider"></div>
+            <p class="quote-text">
+                "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."
+            </p>
+            <p class="reference">(Matius 19:6)</p>
+        </div>
+    </section>
+
+    <section class="invitation-gallery">
+        <div class="gallery-overlay"></div>    
+        <div class="gallery-bg">
+            <img src="tes.jpeg" class="active">
+            <img src="tes.jpeg">
+            <img src="tes.jpeg">
+        </div>
+        <div class="invitation-content" data-aos="zoom-in">
+            <p class="pre-text">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada pernikahan kami:</p>
+            <h2 class="mempelai-names">Mario & Yunita</h2>
+        </div>
+    </section>
+
+    <section class="couple-section">
+        <div class="couple-container">
+            <div class="profile" data-aos="fade-right">
+                <div class="photo-frame">
+                    <img src="pria.jpeg" alt="Mempelai Pria">
+                </div>
+                <h3>Mario</h3>
+                <p class="parents">Putra dari Bpk. Frans & Ibu Indra</p>
+            </div>
+
+            <div class="ampersand" data-aos="zoom-in">&</div>
+
+            <div class="profile" data-aos="fade-left">
+                <div class="photo-frame">
+                    <img src="wanita.jpeg" alt="Mempelai Wanita">
+                </div>
+                <h3>Yunita</h3>
+                <p class="parents">Putri dari Bpk.  & Ibu </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="glass-card" data-aos="fade-up">
+            <h2 class="section-title">Detail Acara</h2>
+            <div class="event-grid">
+                <div class="event-box">
+                    <h4>Pemberkatan</h4>
+                    <p><b>10.00 - 11.00 WIB</b></p>
+                    <p>Gereja Bhetany Ngingasrembyong, Mojokerto</p>
+                </div>
+                <div class="event-box">
+                    <h4>Resepsi</h4>
+                    <p><b>11.00 - 14.00 WIB</b></p>
+                    <p>Rumah sakit organ dalam, Kamboja</p>
+                </div>
+            </div>
+
+            <div class="qr-area">
+                <p>Scan untuk Lokasi G-Maps:</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.google.com" alt="QR Code">
+            </div>
+        </div>
+
+        <div class="glass-card" data-aos="fade-up">
+            <h2 class="section-title">Ucapan & Doa</h2>
+            <form id="commentForm">
+                <input type="text" id="userName" placeholder="Nama Anda" required>
+                <textarea id="userMessage" rows="3" placeholder="Tulis ucapan selamat..." required></textarea>
+                <button type="submit" class="btn-send">Kirim Pesan</button>
+            </form>
+            <div id="commentList" class="comment-box">
+                <div class="comment-item">
+                    <b>Mr. robot:</b>
+                    <p>Barakallah! Semoga lancar sampai hari H ya!</p>
+                    <b>Dr. Strange:</b>
+                    <p>Semoga bahagia selalu!</p>
+                    <b>Spiderman</b>
+                    <p>Anjay selamat pushrank</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="thank-you" data-aos="fade-up">
+        <div class="glass-card">
+            <h2 class="section-title">Terima Kasih</h2>
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</p>
+            <br>
+            <p>Atas kehadiran dan doa restunya, kami ucapkan terima kasih.</p>
+            <br>
+            <h3 class="main-title" style="font-size: 2.5rem;">Mario & Yunita</h3>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
